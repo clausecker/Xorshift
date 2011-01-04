@@ -1,5 +1,6 @@
 name: xorshift
 version: 1
+Cabal-Version: >= 1.6
 build-type: Simple
 
 license: LGPL
@@ -21,14 +22,15 @@ description: The Xorshift random generator is a very fast generator that uses
     2^64-1 for 64-bit numbers. The author didn't tested the random generator,
     but according to it's specification the resulting numbers are of good
     quality.
-category: Random
 
-tested-with: 
-exposed-modules: Random.Xorshift
-exposed: True
-extensions: CPP, GeneralizedNewtypeDeriving
-buildable: True
-hs-source-dirs: src
+category: Math
+
+library
+  exposed-modules: Random.Xorshift
+  exposed: True
+  extensions: CPP, GeneralizedNewtypeDeriving
+  hs-source-dirs: src
+  buildable: True
 
 source-repository head
   type:     git 
