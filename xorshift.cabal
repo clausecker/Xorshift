@@ -7,7 +7,7 @@ copyright: ©2010 Robert Clausecker
 license-file: "COPYING"
 
 author: Robert Clausecker  <fuzxxl@gmail.com>
-bug-reports: mailto:fuzxxl@gmail.com
+bug-reports: http://https://github.com/fuzxxl/Xorshift/issues
 maintainer: Robert Clausecker
 
 build-depends: base -any, random -any, time -any
@@ -29,3 +29,12 @@ exposed: True
 extensions: CPP, GeneralizedNewtypeDeriving
 buildable: True
 hs-source-dirs: src
+
+source-repository head
+  type:     git 
+  location: git://github.com/fuzxxl/Xorshift.git
+
+source-repository this
+  type:     git
+  location: git://github.com/fuzxxl/Xorshift.git
+  tag:      release-1
