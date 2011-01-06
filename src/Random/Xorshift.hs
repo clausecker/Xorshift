@@ -11,7 +11,6 @@
 -- | Xorshift random generators. The generators are implemented according to
 --   the paper <http://www.jstatsoft.org/v08/i14/paper> by George Marsaglia.
 --   You can use the 'RandomGen' instances to generate random numbers easily.
---   .
 --   This module only exports the Random generator that matches your word size,
 --   if you want to use a specific length, try "Random.Xorshift.Int32" and
 --   "Random.Xorshift.Int64" instead.
