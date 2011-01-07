@@ -34,8 +34,10 @@ import Data.Time
 #if WORD_SIZE_IN_BITS == 32
 #define __Xorshift Xorshift32
 import Random.Xorshift.Int32
+import Random.Xorshift.Int64 ()
 #else
 #define __Xorshift Xorshift64
+import Random.Xorshift.Int32 ()
 import Random.Xorshift.Int64
 #endif
 
@@ -49,11 +51,11 @@ newXorshift = getRandomValue >>= return . makeXorshift
 makeXorshift :: Integral a => a -> Xorshift
 makeXorshift = __Xorshift . fromIntegral
 
--- | The type Xorshift is a wrapper around either 'Xorshift32' or 'Xorshift64',
---   depending on the bit size of your system. The idea behind this is, that you
---   may want to use this package as an uncomplicated, fast random generator,
---   but repeated conversion between different word sizes are an absolute
---   performance killer.
+-- | The type Xorshift is a wrapper around either Xorshift32 or Xorshift64,
+--   depending on the bit size of your system. The idea behind this is, that
+--   you may want to use this package as an uncomplicated, fast random
+--   generator, but repeated conversion between different word sizes are an
+--   absolute performance killer.
 --
 --   Thus, if you don't really care about the period of your random generator or
 --   how long the result is, use the 'Xorshift' synonym, whenever possible.
