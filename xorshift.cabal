@@ -10,7 +10,7 @@ license-file: "COPYING"
 author: Robert Clausecker  <fuzxxl@gmail.com>
 bug-reports: http://https://github.com/fuzxxl/Xorshift/issues
 maintainer: Robert Clausecker
-homepage: https://github.com/fuzxxl/Xorshift
+homepage: github.com/fuzxxl/Xorshift
 
 stability:
 homepage:
