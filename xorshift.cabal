@@ -1,5 +1,5 @@
 name: xorshift
-version: 2
+version: 2.0.1
 Cabal-Version: >= 1.6
 build-type: Simple
 
@@ -42,4 +42,4 @@ source-repository head
 source-repository this
   type:     git
   location: git://github.com/fuzxxl/Xorshift.git
-  tag:      release-2
+  tag:      release-2.0.1

@@ -43,7 +43,6 @@ newtype Xorshift64 = Xorshift64 Int64
 instance RandomGen Xorshift64 where
   next a = (fromIntegral c, b) where
     b@(Xorshift64 c) = step64 a
-  split  = error "Splitting of an Xorshift random generator is not implemented."
   genRange a = (fromEnum (minBound `asTypeOf` a),
                 fromEnum (maxBound `asTypeOf` a))
 

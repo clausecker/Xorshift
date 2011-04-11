@@ -43,7 +43,6 @@ newtype Xorshift32 = Xorshift32 Int32
 instance RandomGen Xorshift32 where
   next a = (fromIntegral c, b) where
     b@(Xorshift32 c) = step32 a
-  split  = error "Splitting of an Xorshift random generator is not implemented."
   genRange a = (fromEnum (minBound `asTypeOf` a),
                 fromEnum (maxBound `asTypeOf` a))
 
