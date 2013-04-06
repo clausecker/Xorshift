@@ -1,10 +1,10 @@
 name: xorshift
-version: 2.0.1
+version: 2.0.2
 Cabal-Version: >= 1.6
 build-type: Simple
 
-license: LGPL
-copyright: ©2010 Robert Clausecker
+license: OtherLicense
+copyright: ©2013 Robert Clausecker
 license-file: "COPYING"
 
 author: Robert Clausecker  <fuzxxl@gmail.com>
@@ -12,7 +12,7 @@ bug-reports: https://github.com/fuzxxl/Xorshift/issues
 maintainer: Robert Clausecker
 homepage: https://github.com/fuzxxl/Xorshift
 
-stability:
+stability: stable
 homepage:
 package-url:
 synopsis: Haskell implementation of the xorshift random generator.
@@ -21,9 +21,10 @@ description: The Xorshift random generator is a very fast generator that uses
     with a periode of 2^32-1 for 32-bit numbers and a version with a periode of
     2^64-1 for 64-bit numbers.
     .
-    Although the author didn't tested the random generator,
-    but according to it's specification the resulting numbers are of good
-    quality.
+    The author did not the random generator, but according to it's specification
+    the resulting numbers are of good quality.
+    .
+    The package is licensed under the terms and conditions of the WTFPL 2.0.
 
 category: Math
 
