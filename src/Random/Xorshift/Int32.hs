@@ -13,6 +13,7 @@
 --   for your platform. This generator has a period of 2^32-1 bits if
 --   initialized with a value different from 0. 
 -----------------------------------------------------------------------------
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 module Random.Xorshift.Int32 (
     Xorshift32 (..),
@@ -45,6 +46,11 @@ instance RandomGen Xorshift32 where
     b@(Xorshift32 c) = step32 a
   genRange a = (fromEnum (minBound `asTypeOf` a),
                 fromEnum (maxBound `asTypeOf` a))
+  split _ = error "Xorshift32 is non-splittable"
+#if MIN_VERSION_random(1, 2, 0)
+  genWord32 a = (fromIntegral c, b) where
+    b@(Xorshift32 c) = step32 a
+#endif
 
 -- | Generates a new Xorshift32 from the current time.
 newXorshift32 :: IO Xorshift32
