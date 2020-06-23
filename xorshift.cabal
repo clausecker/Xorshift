@@ -13,7 +13,6 @@ maintainer: Robert Clausecker
 homepage: https://github.com/fuzxxl/Xorshift
 
 stability: stable
-homepage:
 package-url:
 synopsis: Haskell implementation of the xorshift random generator.
 description: The Xorshift random generator is a very fast generator that uses
@@ -37,7 +36,7 @@ library
   buildable: True
 
 source-repository head
-  type:     git 
+  type:     git
   location: git://github.com/fuzxxl/Xorshift.git
 
 source-repository this
